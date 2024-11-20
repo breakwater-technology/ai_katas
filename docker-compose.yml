@@ -8,6 +8,8 @@ services:
       - n8n_data:/home/node/.n8n
       - ./n8n/init:/init
     entrypoint: ["tini", "--", "/init/docker-entrypoint-custom.sh"]
+    environment:
+      - N8N_ENCRYPTION_KEY=FRRa32cxcb3V9gEpfhvaP00a3wle4kw0
     depends_on:
       - postgre
 
